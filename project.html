@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/project.css" media="screen,projection">
+    <script type="text/javascript" src="js/project.js"></script>
+
+    <title>Timer</title>
+
+</head>
+
+<body>
+    <div class="row">
+        <!-- SIDE MENU -->
+        <div class="col s1 " id="menu-box1">
+            <div class="row container cont">
+                <div class="col s12 menu-start">
+                    <ul>
+                        <li><a href="" title="My Profile" class="btn-floating btn-medium btn-modified "><i
+                                    class="large material-icons">account_box</i></a></il>
+                        <li><a href="" title="Notification" class="btn-floating btn-medium btn-modified"><i
+                                    class="large material-icons">more</i></a></il>
+                    </ul>
+                </div>
+                <div class="col s12 menu-end">
+                    <ul>
+                        <li><a href="" title="Settings" class="btn-floating btn-medium btn-modified"><i
+                                    class="large material-icons">build</i></a></il>
+                        <li><a href="" title="FAQ" class="btn-floating btn-medium btn-modified"><i
+                                    class="large material-icons">question_answer</i></a></il>
+                        <li><a href="" title="on/off" class="btn-floating btn-medium btn-modified"><i
+                                    class="large material-icons">settings_power</i></a></il>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <div class="col s2 my_box2 " id="menu-box2">
+            <div class="collection with-header " id="collections">
+                <div class="collection-item collection-header transparent" id="menu_color"><span>Time Tracking</span>
+                </div>
+                <a href="" class="collection-item transparent transparent" id="menu_color">Day</a>
+                <a href="" class="collection-item transparent" id="menu_color">Week</a>
+                <a href="" class="collection-item transparent" id="menu_color">Month</a>
+            </div>
+            <div class="collection with-header" id="collections">
+                <div class="collection-item collection-header  transparent" id="menu_color"><span>Analytics</span></div>
+                <a href="" class="collection-item transparent" id="menu_color">Reports</a>
+                <a href="" class="collection-item transparent" id="menu_color">Insight</a>
+            </div>
+            <div class="collection with-header" id="collections">
+                <div class="collection-item collection-header  transparent" id="menu_color"> <span>Manage</span></div>
+                <a href="" class="collection-item transparent" id="menu_color">clients</a>
+                <a href="" class="collection-item transparent" id="menu_color">Work</a>
+                <a href="" class="collection-item transparent" id="menu_color">Team</a>
+                <a href="" class="collection-item transparent" id="menu_color">Autamation</a>
+                <a href="" class="collection-item transparent" id="menu_color">Integration</a>
+            </div>
+        </div>
+
+        <!-- MAIN MODULE -->
+        <div class="col s9 my_box3 " id="box3">
+
+            <!-- INPUT TIME AND TEXT AREA -->
+            <div class="row">
+
+
+                <!-- Input+Tags -->
+                <div class="row" id="time_text">
+
+                    <!-- Input and Icons 2 col -->
+                    <div class="row">
+                        <div class=' col s9'>
+                            <div>
+                                <a class="secondary-content prefix-button" href=""><i
+                                        class="material-icons prefix">textsms</i></a>
+                                <a class="secondary-content prefix-button" href=""><i
+                                        class="material-icons prefix">textsms</i></a>
+                            </div>
+                            <div class="input-field ">
+                                <input type="text" id="autocomplete-input" class="autocomplete">
+                                <label for="autocomplete-input">Title</label>
+                            </div>
+                        </div>
+                        <div class='col s3 '>
+                            <div class="row">
+                                <a href="" class="secondary-content"><i class="material-icons">stop</i></a>
+                                <a href="" class="secondary-content"><i
+                                        class="material-icons">pause_circle_outline</i></a>
+                                <a href="" class="secondary-content"><i
+                                        class="material-icons">play_circle_outline</i></a>
+                                <div id="time_display">00.00.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vsplivajushie tagi -->
+                    <div class="row">
+                        <div class="chips"></div>
+                    </div>
+                </div>
+
+                <!-- TEXT AREA -->
+                <div class=" row">
+                    <div class="col s12">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Comments</div>
+                                <div class="collapsible-body">
+                                    <div class="input-field col s12">
+                                        <textarea class="materialize-textarea" id="textarea"></textarea>
+                                        <label for="textarea">Your Text</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAVORITS -->
+            <div class="row">Favorits </div>
+
+            <!-- SEARCH -->
+            <hr />
+            <div class="container">
+
+                <nav>
+                    <div class="nav-wrapper blue-grey">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+                <!-- <div class="input-field">
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">Autocomplete</label>
+                </div> -->
+                <!-- <div class="chips"></div> -->
+            </div>
+            <hr />
+
+            <!-- DAYS -->
+            <div class="row days">
+                <!-- MONDAY -->
+                <div class="row" id="monday">
+                    <!-- NAME -->
+                    <div class="col">
+                        <span>MONDAY</span>
+                    </div>
+                    <!-- PLITKA -->
+                    <div class='row'>
+                        <div class='col s4 m2 '>
+                            <div class="card sticky-action">
+
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col s4 m2'>
+                            <div class="card sticky-action">
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col s4 m2'>
+                            <div class="card sticky-action">
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col s4 m2'>
+                            <div class="card sticky-action">
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col s4 m2'>
+                            <div class="card sticky-action">
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col s4 m2'>
+                            <div class="card sticky-action">
+                                <div class="card-content">
+                                    <span class="activator card-title">Title<i
+                                            class="material-icons right">more_vert</i></span>
+                                </div>
+
+                                <div class="card-action">
+                                    <p><a href="">Details</a>
+                                    <p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title">Title2<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis,iste
+                                        sint sunt voluptas fugiat arc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THUESDAY -->
+                <div class="row" id="thuesday">
+                    <div class='row'>
+                    </div>
+                </div>
+
+                <!-- WEDNESDAY -->
+                <div class="row" id="wednesday">
+                    <div class='row'></div>
+                </div>
+
+                <!-- THURSDAY -->
+                <div class="row" id="thursday">
+                    <div class='row'></div>
+                </div>
+
+                <!-- FRIDAY -->
+                <div class="row" id="friday">
+                    <div class='row'></div>
+                </div>
+
+                <!-- SATURDAY -->
+                <div class="row" id="saturday">
+                    <div class='row'></div>
+                </div>
+
+                <!-- SUNDAY -->
+                <div class="row" id="sunday">
+                    <div class='row'></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
